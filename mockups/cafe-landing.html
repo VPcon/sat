@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Кофейня «Зерно»</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F2EA;
+    --bg-dark: #2B1D15;
+    --accent: #C1592A;
+    --cream: #FFFBF4;
+    --text: #2B1D15;
+    --text-muted: #6B5C4E;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+  h1, h2, h3 { font-family: 'Fraunces', serif; }
+
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 60px; }
+  .logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; }
+  .nav-links { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
+  .btn-book { background: var(--accent); color: white; padding: 10px 22px; border-radius: 99px; font-size: 14px; font-weight: 600; }
+
+  .hero { display: flex; align-items: center; padding: 40px 60px 80px; gap: 50px; }
+  .hero-text { flex: 1; }
+  .hero-eyebrow { color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 18px; }
+  .hero h1 { font-size: 56px; line-height: 1.08; font-weight: 700; margin-bottom: 20px; }
+  .hero p { font-size: 16px; color: var(--text-muted); max-width: 420px; margin-bottom: 32px; line-height: 1.6; }
+  .hero-cta { display: flex; gap: 14px; }
+  .btn-primary { background: var(--bg-dark); color: white; padding: 14px 28px; border-radius: 99px; font-weight: 600; font-size: 14px; }
+  .btn-secondary { background: transparent; border: 1.5px solid var(--bg-dark); padding: 14px 28px; border-radius: 99px; font-weight: 600; font-size: 14px; }
+  .hero-image { flex: 1; height: 420px; background: linear-gradient(135deg, #C1592A, #6B3A1E); border-radius: 24px; position: relative; overflow: hidden; }
+  .hero-image::after { content: '☕'; font-size: 140px; position: absolute; bottom: -20px; right: 20px; opacity: 0.25; }
+
+  .stats-bar { display: flex; justify-content: space-around; padding: 30px 60px; background: var(--bg-dark); color: var(--cream); }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700; }
+  .stat-label { font-size: 12px; color: #C9BBA8; margin-top: 4px; }
+
+  .menu-section { padding: 80px 60px; }
+  .section-title { font-size: 36px; text-align: center; margin-bottom: 12px; }
+  .section-sub { text-align: center; color: var(--text-muted); margin-bottom: 50px; }
+  .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .menu-card { background: var(--cream); border-radius: 18px; padding: 24px; }
+  .menu-card-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .menu-card-name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; }
+  .menu-card-price { color: var(--accent); font-weight: 700; }
+  .menu-card-desc { color: var(--text-muted); font-size: 13.5px; line-height: 1.5; }
+
+  .footer-cta { background: var(--bg-dark); color: white; text-align: center; padding: 70px 60px; }
+  .footer-cta h2 { color: white; font-size: 32px; margin-bottom: 16px; }
+  .footer-cta p { color: #C9BBA8; margin-bottom: 28px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">Зерно</div>
+  <div class="nav-links"><span>Меню</span><span>О нас</span><span>Контакты</span></div>
+  <div class="btn-book">Забронировать стол</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Спешелти-кофейня в центре города</div>
+    <h1>Кофе, который<br>задаёт настроение дню</h1>
+    <p>Обжариваем зёрна сами, варим без спешки. Приходите за тишиной по утрам и разговорами по вечерам.</p>
+    <div class="hero-cta">
+      <div class="btn-primary">Забронировать стол</div>
+      <div class="btn-secondary">Смотреть меню</div>
+    </div>
+  </div>
+  <div class="hero-image"></div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">сортов кофе</div></div>
+  <div class="stat"><div class="stat-num">4.9</div><div class="stat-label">рейтинг гостей</div></div>
+  <div class="stat"><div class="stat-num">7</div><div class="stat-label">дней в неделю</div></div>
+  <div class="stat"><div class="stat-num">2018</div><div class="stat-label">работаем с</div></div>
+</div>
+
+<section class="menu-section">
+  <h2 class="section-title">Сегодня в чашке</h2>
+  <p class="section-sub">Сезонное меню, обновляем каждый месяц</p>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <div class="menu-card-top"><span class="menu-card-name">Флэт уайт</span><span class="menu-card-price">290 ₽</span></div>
+      <div class="menu-card-desc">Двойной эспрессо, тонкий слой молочной пены, мягкий вкус без горечи.</div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-top"><span class="menu-card-name">Раф с карамелью</span><span class="menu-card-price">340 ₽</span></div>
+      <div class="menu-card-desc">Сливочный раф на эспрессо с домашней соленой карамелью.</div>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-top"><span class="menu-card-name">Фильтр-кофе</span><span class="menu-card-price">260 ₽</span></div>
+      <div class="menu-card-desc">Альтернативная заварка, меняем зерно каждую неделю.</div>
+    </div>
+  </div>
+</section>
+
+<section class="footer-cta">
+  <h2>Стол точно найдётся</h2>
+  <p>Бронирование занимает 30 секунд</p>
+  <div class="btn-primary" style="display:inline-block;background:var(--accent)">Забронировать стол</div>
+</section>
+
+</body>
+</html>
